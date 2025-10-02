@@ -1,0 +1,6 @@
+@LTS.Cotacao.Api_HostAddress = http://localhost:5104
+
+GET {{LTS.Cotacao.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
