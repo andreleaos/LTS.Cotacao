@@ -1,6 +1,13 @@
+using LTS.Cotacao.IoC;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+var services = builder.Services;
+var config = builder.Configuration;
+
+Startup.Configure(services, config);
+
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -12,9 +19,12 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    Startup.ConfigureSwagger(app, app.Environment);
 }
 
 app.UseHttpsRedirection();
+
+Startup.SetCorsConfig(app);
 
 app.UseAuthorization();
 
