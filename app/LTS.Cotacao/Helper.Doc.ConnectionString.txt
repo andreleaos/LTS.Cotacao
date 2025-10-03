@@ -1,0 +1,4 @@
+connection string
+
+Server=db;Port=3306;Database=quotesdb;Uid=quotes;Pwd=quotespwd;SslMode=None;
+Server=host.docker.internal;Port=3306;Database=quotesdb;Uid=quotes;Pwd=quotespwd;SslMode=None;

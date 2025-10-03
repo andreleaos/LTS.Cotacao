@@ -13,4 +13,10 @@
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LTS.Cotacao.Application\LTS.Cotacao.Application.csproj" />
+    <ProjectReference Include="..\LTS.Cotacao.Domain\LTS.Cotacao.Domain.csproj" />
+    <ProjectReference Include="..\LTS.Cotacao.IoC\LTS.Cotacao.IoC.csproj" />
+  </ItemGroup>
+
 </Project>

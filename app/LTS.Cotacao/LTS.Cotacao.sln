@@ -43,6 +43,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "devops", "devops", "{000DD5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{A72C00BB-AC42-4EFB-BA25-C322CFECF0B0}"
 	ProjectSection(SolutionItems) = preProject
+		Helper.Doc.ConnectionString.txt = Helper.Doc.ConnectionString.txt
 		README.md = README.md
 	EndProjectSection
 EndProject
