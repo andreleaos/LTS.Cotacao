@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LTS.Cotacao.Domain\LTS.Cotacao.Domain.csproj" />
+    <ProjectReference Include="..\LTS.Cotacao.Infrastructure\LTS.Cotacao.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
