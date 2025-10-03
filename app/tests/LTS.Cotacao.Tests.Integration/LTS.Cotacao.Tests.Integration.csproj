@@ -9,13 +9,26 @@
 
   <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="6.0.2" />
+    <PackageReference Include="Dapper" Version="2.1.35" />
+    <PackageReference Include="FluentAssertions" Version="8.7.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="MySqlConnector" Version="2.3.7" />
+    <PackageReference Include="Testcontainers" Version="4.7.0" />
+    <PackageReference Include="Testcontainers.MySql" Version="4.7.0" />
     <PackageReference Include="xunit" Version="2.9.2" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
   </ItemGroup>
 
   <ItemGroup>
     <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\LTS.Cotacao\LTS.Cotacao.Api\LTS.Cotacao.Api.csproj" />
+    <ProjectReference Include="..\..\LTS.Cotacao\LTS.Cotacao.Application\LTS.Cotacao.Application.csproj" />
+    <ProjectReference Include="..\..\LTS.Cotacao\LTS.Cotacao.Domain\LTS.Cotacao.Domain.csproj" />
+    <ProjectReference Include="..\..\LTS.Cotacao\LTS.Cotacao.Infrastructure\LTS.Cotacao.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\LTS.Cotacao\LTS.Cotacao.IoC\LTS.Cotacao.IoC.csproj" />
   </ItemGroup>
 
 </Project>
