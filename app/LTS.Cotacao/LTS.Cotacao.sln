@@ -21,6 +21,31 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTS.Cotacao.Tests.Unit", ".
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTS.Cotacao.Domain", "LTS.Cotacao.Domain\LTS.Cotacao.Domain.csproj", "{6830078B-B887-41DB-A4F8-3BC6CC1B9D99}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTS.Cotacao.Tests.EndToEnd", "..\tests\LTS.Cotacao.Tests.EndToEnd\LTS.Cotacao.Tests.EndToEnd.csproj", "{1BDF75A0-08DD-4E74-833A-04F6B10A42D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "db", "db", "{AB4D73FC-1B2F-4C9B-B51E-0B5211D4D86D}"
+	ProjectSection(SolutionItems) = preProject
+		my.conf = my.conf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "init", "init", "{AD6B652E-CE5E-4A23-892A-A8E668AF68F7}"
+	ProjectSection(SolutionItems) = preProject
+		01_create_schema.sql = 01_create_schema.sql
+		02_seed_companies.sql = 02_seed_companies.sql
+		03_seed_quotes_sept_2025.sql = 03_seed_quotes_sept_2025.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "devops", "devops", "{000DD5F8-96AB-4C35-9937-CE320BD3D50C}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose-backup.txt = docker-compose-backup.txt
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{A72C00BB-AC42-4EFB-BA25-C322CFECF0B0}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +80,10 @@ Global
 		{6830078B-B887-41DB-A4F8-3BC6CC1B9D99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6830078B-B887-41DB-A4F8-3BC6CC1B9D99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6830078B-B887-41DB-A4F8-3BC6CC1B9D99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BDF75A0-08DD-4E74-833A-04F6B10A42D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BDF75A0-08DD-4E74-833A-04F6B10A42D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BDF75A0-08DD-4E74-833A-04F6B10A42D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BDF75A0-08DD-4E74-833A-04F6B10A42D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,5 +96,7 @@ Global
 		{B92E746A-CF4F-421A-B45E-F6ADD489B6E1} = {A8960D37-4F27-4C91-96EA-7247B708F962}
 		{09359599-8378-41D5-9D9B-6AEF6BCDFD67} = {A8960D37-4F27-4C91-96EA-7247B708F962}
 		{6830078B-B887-41DB-A4F8-3BC6CC1B9D99} = {BC6248E6-425A-4F18-98DA-17787316655A}
+		{1BDF75A0-08DD-4E74-833A-04F6B10A42D7} = {A8960D37-4F27-4C91-96EA-7247B708F962}
+		{AD6B652E-CE5E-4A23-892A-A8E668AF68F7} = {AB4D73FC-1B2F-4C9B-B51E-0B5211D4D86D}
 	EndGlobalSection
 EndGlobal

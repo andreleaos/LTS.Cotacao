@@ -1,0 +1,22 @@
+INSERT INTO companies (Ticker, Name) VALUES
+('PETR4', 'Petrobras PN'),
+('VALE3', 'Vale ON'),
+('ITUB4', 'Itaú Unibanco PN'),
+('BBDC4', 'Bradesco PN'),
+('ABEV3', 'Ambev ON'),
+('BBAS3', 'Banco do Brasil ON'),
+('MGLU3', 'Magazine Luiza ON'),
+('B3SA3', 'B3 ON'),
+('WEGE3', 'Weg ON'),
+('SUZB3', 'Suzano ON'),
+('GGBR4', 'Gerdau PN'),
+('CSNA3', 'CSN ON'),
+('KLBN11', 'Klabin Unit'),
+('LREN3', 'Lojas Renner ON'),
+('ELET3', 'Eletrobras ON'),
+('PRIO3', 'PRIO ON'),
+('RAIZ4', 'Raízen PN'),
+('VIVT3', 'Vivo ON'),
+('CIEL3', 'Cielo ON'),
+('RENT3', 'Localiza ON')
+ON DUPLICATE KEY UPDATE Name=VALUES(Name);

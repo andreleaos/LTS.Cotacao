@@ -1,0 +1,38 @@
+version: "3.9"
+services:
+ db:
+  image: mysql:8.0
+  container_name: quotes_mysql
+  environment:
+   MYSQL_ROOT_PASSWORD: root
+   MYSQL_DATABASE: quotesdb
+   MYSQL_USER: quotes
+   MYSQL_PASSWORD: quotespwd
+  ports:
+  - "3307:3306"
+  volumes:
+  - db_data:/var/lib/mysql
+  - ./db/init:/docker-entrypoint-initdb.d
+  - ./db/my.cnf:/etc/mysql/conf.d/my.cnf
+  healthcheck:
+   test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+   interval: 10s
+   timeout: 5s
+   retries: 10
+
+ api:
+  build:
+   context: .
+   dockerfile: LTS.Cotacao.Api/Dockerfile
+  container_name: quotes_api
+  environment:
+   ASPNETCORE_ENVIRONMENT: Development
+   ConnectionStrings__DefaultConnection: "Server=db;Port=3306;Database=quotesdb;Uid=quotes;Pwd=quotespwd;AllowPublicKeyRetrieval=True;SslMode=None;"
+  ports:
+  - "8080:8080"
+  depends_on:
+   db:
+    condition: service_healthy
+
+volumes:
+ db_data:
