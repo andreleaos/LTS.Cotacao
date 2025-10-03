@@ -1,0 +1,21 @@
+Na raiz do projeto execute:
+
+--- configuracao para subir a app
+docker compose up -d --build
+
+Teste:
+
+# Empresas
+curl http://localhost:8080/api/companies
+
+# Cotações de set/2025 (empresa Id=1)
+curl "http://localhost:8080/api/quotes?companyId=1&start=2025-09-01&end=2025-09-30"
+
+Swagger: http://localhost:8080/swagger
+
+####
+
+docker compose down
+docker compose up -d --build
+
+####

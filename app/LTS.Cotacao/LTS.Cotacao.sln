@@ -44,7 +44,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{A72C00BB-AC42-4EFB-BA25-C322CFECF0B0}"
 	ProjectSection(SolutionItems) = preProject
 		Helper.Doc.ConnectionString.txt = Helper.Doc.ConnectionString.txt
+		Helper.Dockerfile-backup_old = Helper.Dockerfile-backup_old
+		Helper.docker.execution,txt = Helper.docker.execution,txt
+		Helper.Testes.Execucao = Helper.Testes.Execucao
 		README.md = README.md
+		Helper.Dockerfile-backup.txt = Helper.Dockerfile-backup.txt
 	EndProjectSection
 EndProject
 Global

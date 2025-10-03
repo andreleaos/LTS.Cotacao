@@ -1,0 +1,35 @@
+﻿▶️ Rodando os testes
+
+Na raiz da solução:
+
+# Unit
+dotnet test tests/LTS.Cotacao.Tests.Unit/LTS.Cotacao.Tests.Unit.csproj -c Release
+
+# Integration (sobe MySQL efêmero com Testcontainers)
+dotnet test tests/LTS.Cotacao.Tests.Integration/LTS.Cotacao.Tests.Integration.csproj -c Release
+
+# E2E (sobe API in-memory + MySQL efêmero)
+dotnet test tests/LTS.Cotacao.Tests.EndToEnd/LTS.Cotacao.Tests.EndToEnd.csproj -c Release
+
+Se preferir rodar tudo:
+
+dotnet test -c Release
+
+###################
+
+subir o docker compose e depois mandar os testes dessa forma
+
+set IT_MYSQL_CONNECTION=Server=127.0.0.1;Port=3307;Database=quotesdb;Uid=quotes;Pwd=quotespwd;AllowPublicKeyRetrieval=True;SslMode=None;
+dotnet test tests/LTS.Cotacao.Tests.Integration/LTS.Cotacao.Tests.Integration.csproj -c Release
+
+set IT_MYSQL_CONNECTION=Server=127.0.0.1;Port=3307;Database=quotesdb;Uid=quotes;Pwd=quotespwd;AllowPublicKeyRetrieval=True;SslMode=None;
+dotnet test tests/LTS.Cotacao.Tests.E2E/LTS.Cotacao.Tests.E2E.csproj -c Release
+
+set IT_MYSQL_CONNECTION=Server=127.0.0.1;Port=3307;Database=quotesdb;Uid=quotes;Pwd=quotespwd;AllowPublicKeyRetrieval=True;SslMode=None;
+dotnet test -c Release
+
+####################
+
+docker compose down
+docker compose up -d --build
+
